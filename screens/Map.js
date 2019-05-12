@@ -55,6 +55,11 @@ class MyClass extends Component {
 				horizontal
 				pagingEnabled
 				scrollEnabled
+				centerContent
+				showsHorizontalScrollIndicator={false}
+				scrollEventThrottle={16}
+				snapToAlignment="center"
+				onScrollEndDrag={props => console.log('onScrollEndDrag', props)}
 				style={styles.parkings
 			}>
 				{parkings.map(parking => this.renderParking(parking))}
@@ -98,13 +103,12 @@ const styles = StyleSheet.create({
 		position: 'absolute',
 		right: 0,
 		left: 0,
-		bottom: 0,
-		backgroundColor: 'transparent',
+		bottom: 24,
 	},
 	parking: {
 		backgroundColor: 'white',
 		borderRadius: 6,
-		padding: 12,
+		padding: 24,
 		marginHorizontal: 24,
 		width: width - (24 * 2),
 	}

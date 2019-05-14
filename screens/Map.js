@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
 import MapView from 'react-native-maps';
-import { red } from 'ansi-colors';
+import { Ionicons } from '@expo/vector-icons';
 
 const { height, width } = Dimensions.get('screen');
 const parkings = [
@@ -69,8 +69,12 @@ class Map extends Component {
 				</View>
 				<View style={{ flex: 1, flexDirection: 'row' }}>
 					<View style={{ flex: 1, justifyContent: 'center' }}>
-						<Text>{item.price}</Text>
-						<Text>{item.rating}</Text>
+						<Text>
+							{item.price}
+						</Text>
+						<Text>
+							{item.rating}
+						</Text>
 					</View>
 					<TouchableOpacity style={styles.buy}>				
 						<View style={{ flex: 1, justifyContent: 'center' }}>
